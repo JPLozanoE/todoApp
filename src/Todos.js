@@ -9,7 +9,7 @@ const Todos = ({todos,deleteTodo}) =>{
             )
         })
     ) : (
-        <p className="center"> You have no to do's left yay!</p>
+        <p className="center"> Worales qué paike ya no tienes nada pendiente!</p>
     ) 
     return(
         <div className="todos collection">
