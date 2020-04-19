@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Todos from './Todos'
+import AddTodo from './AddTodo'
 
 class App extends Component{
 state={
@@ -17,11 +18,19 @@ deleteTodo=(id)=>{
   })
 }
 
+addTodo = (todo) => {
+  todo.id = Math.random()
+  // Agregamos ID único a nuestro ToDo y con el spread operator traemos los TODOS del estado con un spread operator y agregamos el parámetro todo
+  let todos = [...this.state.todos, todo];
+  this.setState({todos});
+}
+
   render(){
     return(
       <div className='todo-app container'>
       <h1 className="center blue-text">Todo's</h1>
       <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+      <AddTodo addTodo={this.addTodo}/>
       </div>
     )
   }
