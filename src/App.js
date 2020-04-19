@@ -5,8 +5,8 @@ import AddTodo from './AddTodo'
 class App extends Component{
 state={
   todos:[
-    {id:1,content:'play mario kart'},
-    {id:2,content:'buy some milk'}
+    {id:1,content:'Pistear'},
+    {id:2,content:'Mamar culo'}
   ]
 }
 deleteTodo=(id)=>{
@@ -28,7 +28,7 @@ addTodo = (todo) => {
   render(){
     return(
       <div className='todo-app container'>
-      <h1 className="center blue-text">Todo's</h1>
+      <h1 className="center blue-text">Tareas pendientes</h1>
       <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
       <AddTodo addTodo={this.addTodo}/>
       </div>
